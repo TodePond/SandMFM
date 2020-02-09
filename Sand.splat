@@ -1,0 +1,53 @@
+= element Sand
+\symbol Sa
+\color #ffcc00
+\symmetries normal, flipx
+
+== Rules
+
+  @ -> _
+  _    @
+
+given W isa Water
+
+  @ -> W
+  W    @
+
+  @_ -> __
+   _     @
+
+  @ -> @
+
+= element Water
+\symbol Wa
+\color #00F
+\symmetries normal, flipx
+
+== Rules
+
+  @ -> _
+  _    @
+
+  @_ -> _@
+
+  @ -> @
+
+= element Flame
+\symbol Fl
+\color #F00
+\symmetries normal
+
+== Rule: Die
+  
+check @ : random.oneIn(3)
+
+  @ -> _
+
+== Rule: Rise
+
+  _ -> @
+  @    _
+
+
+
+
