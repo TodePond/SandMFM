@@ -32,6 +32,25 @@ given W isa Water
 
   @ -> @
 
+= element Slime
+\symbol Sl
+\color #90ee90
+\symmetries normal, flipx
+
+== Rule: Fall
+
+  @ -> _
+  _    @
+
+== Rule: Slide
+
+check @ : random.oneIn(20)
+  @_ -> _@
+
+== Rule: Survive
+
+  @ -> @
+
 = element Flame
 \symbol Fl
 \color #F00
