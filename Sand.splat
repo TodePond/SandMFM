@@ -13,6 +13,9 @@ given W isa Water
   @ -> W
   W    @
 
+  @W -> WW
+   W     @
+
   @_ -> __
    _     @
 
@@ -42,10 +45,18 @@ given W isa Water
   @ -> _
   _    @
 
+given W isa Water
+
+  @ -> W
+  W    @
+
 == Rule: Slide
 
-check @ : random.oneIn(20)
+check @ : random.oneIn(30)
   @_ -> _@
+
+given W isa Water
+  @W -> W@
 
 == Rule: Survive
 
@@ -67,6 +78,37 @@ check @ : random.oneIn(3)
   _ -> @
   @    _
 
+= element Lava
+\symbol La
+\color #F00
+\symmetries normal, flipx
 
+== Rule: Fall
 
+change F isa Flame
+
+  @ -> F
+  _    @
+
+given W isa Water
+
+  @ -> W
+  W    @
+
+== Rule: Slide
+
+check @ : random.oneIn(30)
+  @_ -> _@
+
+given W isa Water
+  @W -> W@
+
+== Rule: Survive
+
+change F isa Flame
+
+  _ -> F
+  @    @
+
+  @ -> @
 
