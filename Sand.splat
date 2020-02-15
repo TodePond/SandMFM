@@ -2,12 +2,13 @@
 \symbol Sa
 \color #ffcc00
 \symmetries normal, flipx
+\state "solid"
 
 == Rules
 
-given W isa Water
-let D = W|_
-let T = W|_
+given L : ew.isLive($cursn) && !$curatom is Sand && !$curatom is Wall
+let D = L|_
+let T = L|_
 
   @ -> D
   D    @
