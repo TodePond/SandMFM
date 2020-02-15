@@ -5,110 +5,16 @@
 
 == Rules
 
-  @ -> _
-  _    @
-
 given W isa Water
+let D = W|_
+let T = W|_
 
-  @ -> W
-  W    @
+  @ -> D
+  D    @
 
-  @W -> WW
-   W     @
-
-  @_ -> __
-   _     @
+  @T -> TD
+   D     @
 
   @ -> @
 
-= element Water
-\symbol Wa
-\color #00F
-\symmetries normal, flipx
-
-== Rules
-
-  @ -> _
-  _    @
-
-  @_ -> _@
-
-  @ -> @
-
-= element Slime
-\symbol Sl
-\color #90ee90
-\symmetries normal, flipx
-
-== Rule: Fall
-
-  @ -> _
-  _    @
-
-given W isa Water
-
-  @ -> W
-  W    @
-
-== Rule: Slide
-
-check @ : random.oneIn(30)
-  @_ -> _@
-
-given W isa Water
-  @W -> W@
-
-== Rule: Survive
-
-  @ -> @
-
-= element Flame
-\symbol Fl
-\color #F00
-\symmetries normal
-
-== Rule: Die
-  
-check @ : random.oneIn(3)
-
-  @ -> _
-
-== Rule: Rise
-
-  _ -> @
-  @    _
-
-= element Lava
-\symbol La
-\color #F00
-\symmetries normal, flipx
-
-== Rule: Fall
-
-change F isa Flame
-
-  @ -> F
-  _    @
-
-given W isa Water
-
-  @ -> W
-  W    @
-
-== Rule: Slide
-
-check @ : random.oneIn(30)
-  @_ -> _@
-
-given W isa Water
-  @W -> W@
-
-== Rule: Survive
-
-change F isa Flame
-
-  _ -> F
-  @    @
-
-  @ -> @
 

@@ -1,0 +1,15 @@
+= element Water
+\symbol Wa
+\color #00F
+\symmetries normal, flipx
+
+== Rules
+
+  @ -> _
+  _    @
+
+  @_ -> _@
+
+  @ -> @
+
+

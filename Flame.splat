@@ -1,0 +1,17 @@
+= element Flame
+\symbol Fl
+\color #FF6600
+\symmetries normal
+
+== Rule: Die
+  
+check @ : random.oneIn(3)
+
+  @ -> _
+
+== Rule: Rise
+
+  _ -> @
+  @    _
+
+

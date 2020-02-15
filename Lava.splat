@@ -1,0 +1,36 @@
+= element Lava
+\symbol La
+\color #F00
+\symmetries normal, flipx
+
+== Rule: Fall
+
+change F isa Flame
+
+  @ -> F
+  _    @
+
+given F isa Flame
+given W isa Water
+let D = W|F
+
+  @ -> D
+  D    @
+
+== Rule: Slide
+
+given W isa Water
+let D = W|_
+check @ : random.oneIn(30)
+
+  @D -> D@
+
+== Rule: Survive
+
+change F isa Flame
+
+  _ -> F
+  @    @
+
+  @ -> @
+

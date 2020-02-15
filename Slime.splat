@@ -1,0 +1,26 @@
+= element Slime
+\symbol Sl
+\color #90ee90
+\symmetries normal, flipx
+
+== Rule: Fall
+
+given W isa Water
+let D = W|_
+
+  @ -> D
+  D    @
+
+== Rule: Slide
+
+given W isa Water
+let D = W|_
+check @ : random.oneIn(30)
+
+  @D -> D@
+
+== Rule: Survive
+
+  @ -> @
+
+
