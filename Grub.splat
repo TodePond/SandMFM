@@ -1,0 +1,62 @@
+= element Grub
+\symbol Gr
+\color #F00
+\symmetries all
+
+== Rules
+
+change H isa GrubHead
+change T isa GrubTail
+
+  @_ -> HT
+
+= element GrubHead
+\symbol GH
+\color #00FF00
+\symmetries all
+
+== Rules 
+
+vote s isa GrubStretch
+
+   s      .
+  s@s -> ...
+   s      .
+
+change S isa GrubStretch
+
+  @_ -> S@
+
+  @ -> @
+
+= element GrubTail
+\symbol GT
+\color #00FF00
+\symmetries all
+
+== Rules
+
+vote s isa GrubStretch
+
+change s {
+. if ($cursn == $winsn) {
+.   ew[$cursn] = ew[0];
+.   ew[0] = Empty.instanceof;
+. }
+.}
+
+   s      s
+  s@s -> s.s
+   s      s
+
+  @ -> @
+
+
+= element GrubStretch
+\symbol GS
+\color #00F
+\symmetries all
+
+== Rules
+
+  @ -> @
