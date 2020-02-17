@@ -15,7 +15,7 @@ change T isa GrubTail
 \color #00FF00
 \symmetries all
 
-== Rules 
+== Rules
 
 vote s isa GrubStretch
 
