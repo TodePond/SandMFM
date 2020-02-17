@@ -17,6 +17,7 @@ change T isa GrubTail
 
 == Rules
 
+given s : true
 vote s isa GrubStretch
 
    s      .
@@ -36,6 +37,7 @@ change S isa GrubStretch
 
 == Rules
 
+given s : true
 vote s isa GrubStretch
 
 change s {
